@@ -1,0 +1,5 @@
+com/project/api/projectapi/controller/TemplateController.class
+com/project/api/projectapi/persistance/Template/TemplateDAO.class
+com/project/api/projectapi/persistance/Template/TemplateFileDAO.class
+com/project/api/projectapi/WebConfig.class
+com/project/api/projectapi/model/Template.class
