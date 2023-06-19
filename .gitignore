@@ -1,4 +1,5 @@
 .DS_Store
 .vscode/settings.json
 Project_API/target/classes
+Project_UI/angular-workspace/node_modules/
 Project_UI/angular-workspace/.angular/cache/
