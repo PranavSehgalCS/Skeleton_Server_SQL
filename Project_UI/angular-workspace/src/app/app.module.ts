@@ -1,5 +1,13 @@
+/**
+ * ///////////////////////////////////////////////////////////////////////////////////////////////////////
+ *  FILE : app.module.ts
+ *  AUTHOR :  Pranav Sehgal 
+ *            + Auto-generated on ng create
+ *            + Auto-Editied on ng generate
+ *  DESCRIPTION : Used to handle angular imports, exports and bindings.
+ //////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -16,15 +24,16 @@ import { CreateTemplateComponent } from './components/Template/create-template/c
     CreateTemplateComponent
     ],
   imports: [
-    FormsModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
   bootstrap: [
-    AppComponent,
+    AppComponent
   ]
 })
-export class AppModule { 
+
+export class AppModule {
+
 }

@@ -1,3 +1,10 @@
+/** ///////////////////////////////////////////////////////////////////////////////////////////////////////
+    FILE:   styles.cc
+    AUTHOR: Pranav Sehgal
+            + Auto-generated on ng create
+    DESCRIPTION : USED to write css styles for index.html
+                  CAN BE USED by other components by redirecting  StyleURL Here
+///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 body{
     background-color: rgb(112, 112, 255);
 } 

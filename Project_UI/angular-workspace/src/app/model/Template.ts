@@ -12,6 +12,7 @@ export function getString(model:Template){
     retVal = retVal + "  , tbool:"+ model.tbool + " )";
     return retVal;
 }
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 export class Template{
     public temid:number = 0;
     public tname:string = "";

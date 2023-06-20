@@ -1,3 +1,10 @@
+/** ///////////////////////////////////////////////////////////////////////////////////////////////////////
+*   FILE  : template-styles.css
+*   AUTHOR : Pranav Sehgal
+*   DESCRIPTION : USED to write css for Templates (or any other file that uses this)
+*                 TO CREATE new component, use ng generate new component <component name>
+///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
 body{
     --box-size: 20px ;
     --background: rgb(112, 112, 255);

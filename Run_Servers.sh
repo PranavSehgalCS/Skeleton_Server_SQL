@@ -1,5 +1,11 @@
 #!/bin/sh
-
+#///////////////////////////////////////////////////////////////////////////////////////////////////////
+#   FILE : Run_Servers.sh
+#   AUTHOR : Pranav Sehgal
+#   DESCRIPTION :   OPENS Postgress via Terminal so you can start DB
+#                   OPENS a Terminal window and launches backend using mvn compile exec:java;
+#                   OPENS a Terminal window and launches fronted using ng serve --open;
+#///////////////////////////////////////////////////////////////////////////////////////////////////////
 open  -a "Postgres"
 sleep 10;
 

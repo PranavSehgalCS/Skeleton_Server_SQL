@@ -1,13 +1,26 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////
+*   FILE  : view-template.component.ts
+*   AUTHOR : Pranav Sehgal
+*            +Auto-generated on :
+*                    ng generate new component view-template 
+
+*   DESCRIPTION : USED as the typescript file for Viewing Templates
+*                 USES Template model to encapsulate data
+*                 USES TemplateService service to communicate with backend 
+*                 TO CREATE new component, use ng generate new component <component name>
+///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
 import { Component } from '@angular/core';
-import { Template,getString } from 'src/app/model/Template';
+import { Template} from 'src/app/model/Template';
 import { TemplateService } from 'src/app/services/template.service';
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @Component({
   selector: 'app-view-template',
   templateUrl: './view-template.component.html',
   styleUrls: ['../template-styles.css']
 })
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 export class ViewTemplateComponent {
   constructor(public tempService:TemplateService){
   }

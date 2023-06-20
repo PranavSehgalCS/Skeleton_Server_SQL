@@ -1,11 +1,24 @@
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////
+*   FILE  : create-template.component.ts
+*   AUTHOR : Pranav Sehgal
+*            +Auto-generated on :
+*                    ng generate new component create-template 
+*   DESCRIPTION : USED as the typescript file for Creating Templates
+*                 USES Template model to encapsulate data
+*                 USES TemplateService service to communicate with backend 
+*                 TO CREATE new component, use ng generate new component <component name>
+////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
 import { Component } from '@angular/core';
 import { TemplateService } from 'src/app/services/template.service';
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @Component({
   selector: 'app-create-template',
   templateUrl: './create-template.component.html',
   styleUrls: ['../template-styles.css']
 })
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
 export class CreateTemplateComponent {
   constructor(public tempService:TemplateService){}
 

@@ -1,6 +1,12 @@
+/** ///////////////////////////////////////////////////////////////////////////////////////////////////////
+ *  FILE : app-routing.module.ts
+ *  AUTHOR : Pranav Sehgal
+ *           + Auto-generated on ng create if angular routing is selected
+ *  DESCRIPTION : USED to select component to display within index.html
+ *                CHANGES bases on URL path
+ ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
 
 import { ViewTemplateComponent } from './components/Template/view-template/view-template.component';
 import { CreateTemplateComponent } from './components/Template/create-template/create-template.component';
