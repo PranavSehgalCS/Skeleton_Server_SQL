@@ -1,0 +1,71 @@
+body{
+    --box-size: 20px ;
+    --background: rgb(112, 112, 255);
+    
+    width: 80rem;
+    height: 100rem;
+    font-size: 22px;
+    text-align: center;
+    align-content: center;
+    justify-content: space-around;
+    background-color: var(--background);
+}
+
+.info-line, .info-line2{
+    height: 4rem;
+    width: 90rem;
+    display: flex;
+}
+.info-line2{
+    background-color: rgb(255, 78, 178);
+}
+.info-box, .big-info-box{
+    width:15rem;
+    margin-top: 1rem;
+    text-align: center;
+    vertical-align: middle;
+}
+.big-info-box{
+    font-size: 24px;
+}
+
+.form-container{
+    width: 30rem;
+    margin-top: 5rem;
+    padding: 1rem 0rem;
+    padding-bottom: 2rem;
+    border-radius: 20px;
+    background-color: rgb(90, 178, 255);
+    max-height: 20rem;
+}
+
+.genput{
+    height: 2rem;
+    width: 15rem;
+    text-align: center;
+    border-radius: 32px;
+    margin-bottom: 1rem ;
+}
+
+.checkbox{
+    width: var(--box-size);
+    height: var(--box-size);
+    margin-bottom: 1rem;
+}
+.delbox{
+    border:none;
+    width:10rem;
+    height: 2.5rem;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #daff44;
+    border-radius: 10px;
+}
+.delbox:hover{
+    padding: 0.5rem;
+    font-size: 23px;
+    height: 3rem;
+    margin-top: 0.5rem;
+    background-color: #ff0000; 
+    transition-duration: 0.2s;
+}

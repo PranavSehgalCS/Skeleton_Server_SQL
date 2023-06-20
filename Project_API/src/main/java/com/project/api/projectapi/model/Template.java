@@ -21,16 +21,16 @@ public class Template {
         this.tbool = tbool;
     }
 
-    public int getID(){
+    public int getTemid(){
         return this.temid;
     }
-    public String getName(){
+    public String getTname(){
         return this.tname;
     }
-    public String getMessage(){
+    public String getTmess(){
         return this.tmess;
     }
-    public Boolean getBool(){
+    public Boolean getTbool(){
         return this.tbool;
     }
 }

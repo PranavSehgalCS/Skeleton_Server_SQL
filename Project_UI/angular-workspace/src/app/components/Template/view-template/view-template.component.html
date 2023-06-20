@@ -1,3 +1,17 @@
-<body style = "background-color: aqua;">
-    <p>view-template works!</p>
+<body>
+    <div class="{{getLine()}}" >
+        <div class="big-info-box">Template ID</div>
+        <div class="big-info-box">Template NAME</div>
+        <div class="big-info-box">Template MESSAGE</div>
+        <div class="big-info-box">Template BOOL</div>
+    </div>
+    <div *ngIf="refresh">
+        <a *ngFor="let temp of mapToArr()" class="{{getLine()}}">
+            <div class = "info-box">{{temp.temid}}</div>
+            <div class = "info-box">{{temp.tname}}</div>
+            <div class = "info-box">{{temp.tmess}}</div>
+            <div class = "info-box">{{temp.tbool}}</div>
+            <div><button class= "info-box delbox" (click)="delButton(temp.temid)" >Delete</button></div>
+        </a>
+    </div> 
 </body>

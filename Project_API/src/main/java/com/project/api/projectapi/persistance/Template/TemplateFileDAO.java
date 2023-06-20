@@ -41,9 +41,7 @@ public class TemplateFileDAO implements TemplateDAO{
         try {
             this.conn = DriverManager.getConnection(database,datauser,datapass);
             this.stat = conn.createStatement();
-            if(loadTemplates()){
-                this.updated=true;
-            }
+            this.updated = this.loadTemplates();
         } catch (Exception e) {
             System.out.println("\nERROR While Initializing Connection --> " + e);
         }
@@ -65,9 +63,9 @@ public class TemplateFileDAO implements TemplateDAO{
                                     load.getString( "tmess"),
                                     load.getBoolean("tbool")
                                     );
-                TemplateHolder.put(mapObj.getID(), mapObj);
+                TemplateHolder.put(mapObj.getTemid(), mapObj);
             }
-            nextID = (mapObj.getID()+1);
+            nextID = (mapObj.getTemid()+1);
             return true;
         } catch (Exception e) {
             System.out.println("ERROR While loading templates from database --> \n" + e);
@@ -97,7 +95,7 @@ public class TemplateFileDAO implements TemplateDAO{
             Template[] retVal =  new Template[1];
             if(temid != -1){
                 for(Template i: this.TemplateHolder.values()){
-                    if(i.getID()==temid){
+                    if(i.getTemid()==temid){
                         retVal[0]=i;
                         return retVal;
                     }
@@ -141,7 +139,7 @@ public class TemplateFileDAO implements TemplateDAO{
             Template currTemplate = null;
             Boolean retVal = true;
             for(Template i:TemplateHolder.values()){
-                if(i.getID() == temid){
+                if(i.getTemid() == temid){
                     currTemplate = i;
                     break;
                 }
@@ -149,13 +147,13 @@ public class TemplateFileDAO implements TemplateDAO{
             if(currTemplate==null){
                 return false;
             }
-            if(!(tbool == currTemplate.getBool())){
+            if(!(tbool == currTemplate.getTbool())){
                 retVal = retVal && saveTemplates("UPDATE templates SET tbool = '" + tbool + "' WHERE temid = " + temid + ";");
             }
-            if(retVal && !(tname.equals(currTemplate.getName()))){
+            if(retVal && !(tname.equals(currTemplate.getTname()))){
                 retVal = retVal && saveTemplates("UPDATE templates SET tname = '" + tname + "' WHERE temid = " + temid + ";");
             }
-            if(retVal && !(tmess.equals(currTemplate.getMessage()))){
+            if(retVal && !(tmess.equals(currTemplate.getTmess()))){
                 retVal = retVal && saveTemplates("UPDATE templates SET tmess = '" + tmess + "' WHERE temid = " + temid + ";");
             }
             if(retVal){

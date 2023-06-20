@@ -6,10 +6,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { ViewTemplateComponent } from './components/Template/view-template/view-template.component';
+import { CreateTemplateComponent } from './components/Template/create-template/create-template.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ViewTemplateComponent,
+    CreateTemplateComponent
     ],
   imports: [
     FormsModule,

@@ -5,21 +5,24 @@
 //  DESCRIPTION: Is a template ts model with constructor to encapsulate data 
 //               USE this as a template to create your own ts data model 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
+export function getString(model:Template){
+    var retVal:string = "( temid:"+ model.temid;
+    retVal = retVal + "  , tname:"+ model.tname;
+    retVal = retVal + "  , tmess:"+ model.tmess;
+    retVal = retVal + "  , tbool:"+ model.tbool + " )";
+    return retVal;
+}
 export class Template{
     public temid:number = 0;
     public tname:string = "";
     public tmess:string = "";
     public tbool:boolean = false;
 
-    public constructor(init?:Partial<Template>) {
-        Object.assign(this, init);
-    }
-    public getString():string{
-        var retVal:string = "";
-        retVal = retVal + "{temid:"+this.temid.toString();
-        retVal = retVal + ",tname:"+this.tname;
-        retVal = retVal + ",tmess:"+this.tmess;
-        retVal = retVal + ",tbool:"+this.tbool.toString()+"}\n";
-        return retVal;
+    public constructor(temid:number, tname:string ,tmess:string, tbool:boolean) {
+        this.temid = temid;
+        this.tmess = tname;
+        this.tmess = tmess;
+        this.tbool = tbool;
     }
 }
+

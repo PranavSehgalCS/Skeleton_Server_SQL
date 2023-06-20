@@ -1,1 +1,12 @@
-<p>create-template works!</p>
+<body style="display: flex;">
+    <div class = "form-container">
+        <h2 class="form-title" [autofocus]="true">Create Template</h2>
+        <h5>{{tempService.errString}}</h5>
+        <form style="display: inline;">
+            <div><input #tname type="text" class="genput" autofocus placeholder="Enter Template Name"></div>
+            <div><input #tmess type="text" class="genput" placeholder="Enter Template Message"></div>
+            <div style="font-size: 18px;">Boolean Status : <input #tbool type="checkbox" class="checkbox"></div>
+            <button (click)="submitForm(tname.value, tmess.value, tbool.checked)">Click To Create</button>
+        </form>
+    </div>
+</body>
