@@ -47,15 +47,15 @@ public class TemplateController{
     }
 
     @GetMapping("/{temid}")
-    public ResponseEntity<Template>getTLFromPaths(  @PathVariable Integer temid){
+    public ResponseEntity<Template[]>getTLFromPaths(  @PathVariable Integer temid){
         LOG.info("\nGET /template/"+temid);
         try {
-            Template retVal = this.templateDao.getTemplates(temid)[0];
+            Template[] retVal = this.templateDao.getTemplates(temid);
             if(retVal!=null){
-                return new ResponseEntity<Template>(retVal ,HttpStatus.OK);
+                return new ResponseEntity<Template[]>(retVal ,HttpStatus.OK);
             }else{
                 
-                return new ResponseEntity<Template>(HttpStatus.CONFLICT);
+                return new ResponseEntity<Template[]>(HttpStatus.CONFLICT);
             }
         } catch (Exception e) {
             LOG.log(Level.SEVERE,e.getLocalizedMessage());

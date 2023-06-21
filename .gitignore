@@ -2,3 +2,4 @@
 .vscode/settings.json
 Project_API/target/classes
 Project_UI/angular-workspace/.angular/cache/
+Project_UI/angular-workspace/node_modules/.cli-ngcc/

@@ -16,12 +16,14 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { ViewTemplateComponent } from './components/Template/view-template/view-template.component';
 import { CreateTemplateComponent } from './components/Template/create-template/create-template.component';
+import { EditTemplateComponent } from './components/Template/edit-template/edit-template.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ViewTemplateComponent,
-    CreateTemplateComponent
+    CreateTemplateComponent,
+    EditTemplateComponent
     ],
   imports: [
     BrowserModule,

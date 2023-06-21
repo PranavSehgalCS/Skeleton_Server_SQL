@@ -6,9 +6,10 @@
 
     DESCRIPTION :   USED as the HTML file for Viewing Templates
                     USES view-template.component.ts as component for typescript data 
-                    TO CREATE new component, use ng generate new component <component name>
+                    TO CREATE new component, use ng generate component <component name>
 ////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <body>
+    <div class="page_head">{{mapToArr().length}} Templates Exist<a class="plus" routerLink="/templates/create">+</a></div>
     <div class="{{getLine()}}" >
         <div class="big-info-box">Template ID</div>
         <div class="big-info-box">Template NAME</div>
@@ -22,6 +23,7 @@
             <div class = "info-box">{{temp.tmess}}</div>
             <div class = "info-box">{{temp.tbool}}</div>
             <div><button class= "info-box delbox" (click)="delButton(temp.temid)" >Delete</button></div>
+            <div><button class= "info-box edibox" (click)="ediButton(temp.temid)" >Edit</button></div>
         </a>
     </div> 
 </body>

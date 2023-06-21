@@ -9,7 +9,7 @@
 import { Observable, of } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Template } from '../model/Template';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @Injectable({
@@ -17,7 +17,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 })
 export class TemplateService {
 
-  public errString:string = "_";
+  public errString:string = "";
   private templateUrl:string = 'http://localhost:8080/template';;
 
   constructor(private http: HttpClient) { }
@@ -27,8 +27,11 @@ export class TemplateService {
   }
   
   getTemplates(temid:number): Observable<Template[]>{
-    if(temid!=-1){ return this.http.get<Template[]>(this.templateUrl+String(temid)).pipe(); }
-    return this.http.get<Template[]>(this.templateUrl).pipe();
+    if(temid!=-1){
+      var getVal:Template = new Template(0,"","",false);
+      return this.http.get<Template[]>(this.templateUrl+"/"+String(temid));
+    }
+    return this.http.get<Template[]>(this.templateUrl);
   }
 
   createTemplate(tname:string, tmess:string, tbool:boolean): Observable<boolean>{
@@ -38,12 +41,12 @@ export class TemplateService {
     return this.http.post<boolean>(this. templateUrl,null,{params:param});
   }
 
-  updateTemplate(temind:number, tname:string, tmess:string, tbool:boolean): boolean{
-    const param = new HttpParams().append("tname", tname)
-                                  .append("tmess", tmess)
-                                  .append("tbool", tbool)                     
-    var retVal = this.http.put(this.templateUrl,null,{params:param}).subscribe();
-    return Boolean(retVal)
+  updateTemplate(temp:Template): Observable<boolean>{
+    const param = new HttpParams().append("temid", temp.temid)
+                                  .append("tname", temp.tname)
+                                  .append("tmess", temp.tmess)
+                                  .append("tbool", String(temp.tbool));
+    return this.http.put<boolean>(this.templateUrl,null,{params:param});
   }
 
   deleteTemplate(temid:number): Observable<boolean>{
@@ -54,4 +57,5 @@ export class TemplateService {
   changeErr(err:string):void{
     this.errString = err;
   }
+    
 }

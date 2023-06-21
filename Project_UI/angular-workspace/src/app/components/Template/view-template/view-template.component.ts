@@ -7,11 +7,12 @@
 *   DESCRIPTION : USED as the typescript file for Viewing Templates
 *                 USES Template model to encapsulate data
 *                 USES TemplateService service to communicate with backend 
-*                 TO CREATE new component, use ng generate new component <component name>
+*                 TO CREATE new component, use ng generate component <component name>
 ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 import { Component } from '@angular/core';
 import { Template} from 'src/app/model/Template';
+import { Router } from '@angular/router';
 import { TemplateService } from 'src/app/services/template.service';
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -22,7 +23,8 @@ import { TemplateService } from 'src/app/services/template.service';
 })
 ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 export class ViewTemplateComponent {
-  constructor(public tempService:TemplateService){
+  constructor(public tempService:TemplateService,
+              private router:Router){
   }
   
   public retVal:string="";
@@ -58,5 +60,8 @@ export class ViewTemplateComponent {
       this.templateMap.delete(temid);
       this.refresh = true;
     }
+  }
+  async ediButton(temidParam:number){
+    this.router.navigate(['/templates/edit'],{queryParams:{temid:temidParam}});
   }
 }
