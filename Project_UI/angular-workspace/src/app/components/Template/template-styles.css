@@ -27,7 +27,6 @@ body{
     margin-left: 5rem;
     font-family: “Comic Sans MS”, “Comic Sans”, cursive;
 }
-
 .info-line, .info-line2{
     height: 4rem;
     width: 90rem;
@@ -45,7 +44,6 @@ body{
 .big-info-box{
     font-size: 24px;
 }
-
 .form-container{
     width: 35rem;
     margin-top: 5rem;
@@ -55,7 +53,6 @@ body{
     background-color: rgb(90, 178, 255);
     max-height: 25rem;
 }
-
 .genput{
     height: 2rem;
     width: 15rem;
@@ -63,7 +60,6 @@ body{
     border-radius: 32px;
     margin-bottom: 1rem ;
 }
-
 .checkbox{
     width: var(--box-size);
     height: var(--box-size);
@@ -71,11 +67,11 @@ body{
 }
 .delbox{
     border:none;
-    width:10rem;
+    width:8rem;
     height: 2.5rem;
     font-size: 20px;
     text-decoration: none;
-    background-color: #ff0000;
+    background-color: #ff6969;
     border-radius: 10px;
 }
 .delbox:hover{
@@ -83,17 +79,18 @@ body{
     font-size: 23px;
     height: 3rem;
     margin-top: 0.5rem;
-    background-color: #daff44;
+    background-color: #ff0000;
     transition-duration: 0.2s;
 }
 .edibox{
     border:none;
-    width:10rem;
+    width:8rem;
     height: 2.5rem;
     font-size: 20px;
     margin-left: 1rem;
+    margin-right: 1rem;
     text-decoration: none;
-    background-color: #daff44;
+    background-color: #b7d249;
     border-radius: 10px;
 }
 .edibox:hover{
@@ -101,7 +98,25 @@ body{
     font-size: 23px;
     height: 3rem;
     margin-top: 0.5rem;
-    background-color: #ff0000; 
+    background-color: #deff23; 
+    transition-duration: 0.2s;
+}
+.viebox{
+    border:none;
+    width:8rem;
+    height: 2.5rem;
+    font-size: 20px;
+    margin-left: 1rem;
+    text-decoration: none;
+    background-color: #45ad35;
+    border-radius: 10px;
+}
+.viebox:hover{
+    padding: 0.5rem;
+    font-size: 23px;
+    height: 3rem;
+    margin-top: 0.5rem;
+    background-color: #39ff2f; 
     transition-duration: 0.2s;
 }
 .create-page-button{
@@ -139,4 +154,19 @@ body{
     font-size: 24px;
     margin:0.5rem;
     color: #ff0000;
+}
+
+.infoid{
+    width: 26rem;
+    display: flex;
+    margin-left: 5rem;
+    margin-bottom: 0.5rem;
+    justify-self: center;
+}
+.info{
+    width:8.5rem;
+    text-align: left;
+}
+.id{
+    text-align: left;
 }

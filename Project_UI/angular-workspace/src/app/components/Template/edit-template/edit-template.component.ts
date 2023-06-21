@@ -48,7 +48,7 @@ export class EditTemplateComponent {
       alert("Invalid Temid Provided");
     }
     await this.tempService.delay(4000);
-    if(!retVal){
+    if(!retVal && !this.errStat){
       this.errStat = true;
       this.headerMessage = "An ERROR occured" 
       alert("An ERROR occured while getting Data!")

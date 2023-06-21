@@ -2,8 +2,8 @@
 *   FILE  : view-template.component.ts
 *   AUTHOR : Pranav Sehgal
 *            +Auto-generated on :
-*                    ng generate new component view-template 
-
+*                    ng generate component view-template 
+*
 *   DESCRIPTION : USED as the typescript file for Viewing Templates
 *                 USES Template model to encapsulate data
 *                 USES TemplateService service to communicate with backend 
@@ -64,4 +64,8 @@ export class ViewTemplateComponent {
   async ediButton(temidParam:number){
     this.router.navigate(['/templates/edit'],{queryParams:{temid:temidParam}});
   }
+  async vieButton(temidParam:number){
+    this.router.navigate(['/templates/viewtemplate'],{queryParams:{temid:temidParam}});
+  }
+  
 }
