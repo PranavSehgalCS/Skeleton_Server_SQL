@@ -22,9 +22,9 @@
             <div class = "info-box">{{temp.tname}}</div>
             <div class = "info-box">{{temp.tmess}}</div>
             <div class = "info-box">{{temp.tbool}}</div>
-            <div><button class= "info-box viebox" (click)="vieButton(temp.temid)" >View</button></div>
-            <div><button class= "info-box edibox" (click)="ediButton(temp.temid)" >Edit</button></div>
-            <div><button class= "info-box delbox" (click)="delButton(temp.temid)" >Delete</button></div>
+            <div><button class= "{{getBox()}}" (click)="vieButton(temp.temid)" >View</button></div>
+            <div><button class= "{{getBox()}}" (click)="ediButton(temp.temid)" >Edit</button></div>
+            <div><button class= "{{getBox()}}" (click)="delButton(temp.temid)" >Delete</button></div>
         </a>
     </div> 
 </body>

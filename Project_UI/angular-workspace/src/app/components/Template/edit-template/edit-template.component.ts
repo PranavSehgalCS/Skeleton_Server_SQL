@@ -40,6 +40,7 @@ export class EditTemplateComponent {
           this.curTemp.tname = temp.tname;
           this.curTemp.tmess = temp.tmess;
           this.curTemp.tbool = temp.tbool;
+          this.pageInitialized = true;
           this.headerMessage = "Editing Template of ID : " + this.curTemp.temid;
         }
       });
@@ -53,7 +54,6 @@ export class EditTemplateComponent {
       this.headerMessage = "An ERROR occured" 
       alert("An ERROR occured while getting Data!")
     }
-    this.pageInitialized = true;
   }
 
   async updateTemplate(tname:string,tmess:string, tbool:boolean){

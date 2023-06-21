@@ -51,6 +51,13 @@ export class ViewTemplateComponent {
     }
     return "info-line2";
   }
+  public getBox():string{
+    if(this.line){
+      return "info-box box-comp";
+    }else{
+      return "info-box box-comp2"
+    }
+  }
 
   async delButton(temid:number){
     if(confirm("Are You Sure You Want To Delete This?")){

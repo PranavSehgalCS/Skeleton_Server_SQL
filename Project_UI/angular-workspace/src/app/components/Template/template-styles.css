@@ -8,8 +8,11 @@
 
 body{
     --box-size: 20px ;
-
-    --background: rgb(112, 112, 255);
+    --grey-dark:rgb(154, 154, 154);
+    --grey-light: rgb(239, 238, 238);
+    --grey-color:rgb(190, 188, 188);
+    --background: rgb(255, 255, 255);
+    
     
     width: 80rem;
     height: 100rem;
@@ -20,11 +23,10 @@ body{
     background-color: var(--background);
 }
 .page_head{
-    color: white;
     font-size: 42px;
-    margin-bottom: 3rem;
-    margin-top: 5rem;
+    margin-top: 2rem;
     margin-left: 5rem;
+    margin-bottom: 3rem;
     font-family: “Comic Sans MS”, “Comic Sans”, cursive;
 }
 .info-line, .info-line2{
@@ -33,7 +35,7 @@ body{
     display: flex;
 }
 .info-line2{
-    background-color: rgb(255, 78, 178);
+    background-color: var(--grey-color);
 }
 .info-box, .big-info-box{
     width:15rem;
@@ -50,11 +52,11 @@ body{
     padding: 1rem 0rem;
     padding-bottom: 2rem;
     border-radius: 20px;
-    background-color: rgb(90, 178, 255);
+    background-color:  var(--grey-color);
     max-height: 25rem;
 }
 .genput{
-    height: 2rem;
+    height: 2.2rem;
     width: 15rem;
     text-align: center;
     border-radius: 32px;
@@ -63,60 +65,28 @@ body{
 .checkbox{
     width: var(--box-size);
     height: var(--box-size);
-    margin-bottom: 1rem;
 }
-.delbox{
+
+.box-comp,.box-comp2{
     border:none;
     width:8rem;
     height: 2.5rem;
     font-size: 20px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     text-decoration: none;
-    background-color: #ff6969;
-    border-radius: 10px;
+    border-radius: 15px;
+    background-color: var(--grey-color);
 }
-.delbox:hover{
+.box-comp2{
+    background-color: var(--grey-light);
+}
+.box-comp:hover, .box-comp2:hover{
     padding: 0.5rem;
     font-size: 23px;
     height: 3rem;
     margin-top: 0.5rem;
-    background-color: #ff0000;
-    transition-duration: 0.2s;
-}
-.edibox{
-    border:none;
-    width:8rem;
-    height: 2.5rem;
-    font-size: 20px;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    text-decoration: none;
-    background-color: #b7d249;
-    border-radius: 10px;
-}
-.edibox:hover{
-    padding: 0.5rem;
-    font-size: 23px;
-    height: 3rem;
-    margin-top: 0.5rem;
-    background-color: #deff23; 
-    transition-duration: 0.2s;
-}
-.viebox{
-    border:none;
-    width:8rem;
-    height: 2.5rem;
-    font-size: 20px;
-    margin-left: 1rem;
-    text-decoration: none;
-    background-color: #45ad35;
-    border-radius: 10px;
-}
-.viebox:hover{
-    padding: 0.5rem;
-    font-size: 23px;
-    height: 3rem;
-    margin-top: 0.5rem;
-    background-color: #39ff2f; 
+    background-color: var(--grey-dark);
     transition-duration: 0.2s;
 }
 .create-page-button{
@@ -127,35 +97,31 @@ body{
     border-radius: 10px;
 }
 .create-page-button:hover{
-    font-size: 22px;
+    font-size: 20px;
     width:14rem;
     transition-duration: 0.2s;
 }
 .plus{
     color:white;
+    font-size: 30px;
+    margin-left: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    margin-left: 2rem;
     border-radius: 10px;
     text-decoration: none;
-    font-size: 30px;
-    background-color: rgb(65, 65, 253);
+    background-color: var(--grey-color);
 }
 .plus:hover{
-    font-size: 42px;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    border-radius: 24px;
-    
+    font-size: 38px;
+    border-radius: 18px;
     transition-duration: 0.2s;
-    background-color: rgb(0, 0, 241); 
+    background-color: var(--grey-dark); 
 }
 .err-msg{
     font-size: 24px;
     margin:0.5rem;
     color: #ff0000;
 }
-
 .infoid{
     width: 26rem;
     display: flex;
