@@ -12,7 +12,7 @@ a=1;
 
 open  -a "Postgres"
 
-osascript -e 'tell application "Terminal" to do script "cd Desktop/P3F/Skeleton_Server_SQL/Project_API;
+osascript -e 'tell application "Terminal" to do script "cd Desktop/P3/Skeleton_Server_SQL/Project_API;
 source ~/.bashrc;
 title backend_marked_for_deletion;
 mvn compile exec:java;mvn compile exec:java;"'
@@ -26,7 +26,7 @@ echo “\nAngular cache removed {Previous Session} ”
 rm -r .cli-ngcc/;
 echo “\ncli-ngcc cache removed {Previous Session} ”
 
-osascript -e 'tell application "Terminal" to do script "cd Desktop/P3F/Skeleton_Server_SQL/Project_UI/angular-workspace; 
+osascript -e 'tell application "Terminal" to do script "cd Desktop/P3/Skeleton_Server_SQL/Project_UI/angular-workspace; 
 source ~/.bashrc;
 title frontend_marked_for_deletion;
 ng serve --open;"'
